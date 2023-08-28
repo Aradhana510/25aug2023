@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteMaster.master.cs" Inherits="dynamicwebsite.SiteMaster1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Dynamic website with db connectivity</title>
+     <link rel="stylesheet" href="styles.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+    </div>
+    <form id="form1" runat="server">
+        <header>
+            <div class="header-content">
+                <h1>Your Website Logo</h1>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="Home.aspx">Home</a></li>
+                <li><a href="Articles.aspx">Articles</a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </nav>
+
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2023 Your Website. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </form>
+</body>
+</html>
